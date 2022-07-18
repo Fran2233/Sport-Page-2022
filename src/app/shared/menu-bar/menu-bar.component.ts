@@ -15,11 +15,11 @@ export class MenuBarComponent implements OnInit {
     this.items = [
       {
         label: 'Man',
-        url:'man'
+        url: 'man'
       },
       {
         label: 'Woman',
-        url:'woman'
+        url: 'woman'
       },
       {
         label: 'Boys',
@@ -27,8 +27,14 @@ export class MenuBarComponent implements OnInit {
       },
       {
         label: 'Girl',
-        url:'girl'
+        url: 'girl'
+      },
+      {
+
+        icon: 'pi pi-home',
+        url: 'home'
       }
+
 
 
     ]

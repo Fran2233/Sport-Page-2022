@@ -1,1 +1,33 @@
-<p>home works!</p>
+<p-table [value]="productos" responsiveLayout="scroll">
+    <ng-template pTemplate="caption">
+        <div class="flex align-items-center justify-content-between">
+            Products
+
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th pSortableColumn="nombre">Name<p-sortIcon field="nombre"></p-sortIcon>
+            </th>
+            <th>Image</th>
+            <th pSortableColumn="precio">Price<p-sortIcon field="precio"></p-sortIcon>
+            </th>
+            <th pSortableColumn="categoria">Category<p-sortIcon field="categoria"></p-sortIcon>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{product.nombre}}</td>
+            <td><img [src]="product.img!" [alt]="product.nombre" width="100" class="shadow-4" /></td>
+            <td>{{product.precio }}</td>
+            <td>{{product.categoria | titlecase}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+
+    </ng-template>
+</p-table>
+
+
+

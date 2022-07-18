@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginatorModule } from 'primeng/paginator';
 import { TableModule } from 'primeng/table';
 import { MenubarModule } from 'primeng/menubar';
+import {ButtonModule} from 'primeng/button';
 @NgModule({
   declarations: [],
   imports: [
@@ -13,7 +14,8 @@ import { MenubarModule } from 'primeng/menubar';
     BrowserAnimationsModule,
     PaginatorModule,
     TableModule,
-    MenubarModule
+    MenubarModule,
+    ButtonModule
   ],
   exports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { MenubarModule } from 'primeng/menubar';
     BrowserAnimationsModule,
     PaginatorModule,
     TableModule,
-    MenubarModule
+    MenubarModule,
+    ButtonModule
   ]
 })
 export class PrimeNgModule { }
