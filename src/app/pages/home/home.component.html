@@ -20,7 +20,7 @@
         <tr>
             <td>{{product.nombre}}</td>
             <td><img [src]="product.img!" [alt]="product.nombre" width="100" class="shadow-4" /></td>
-            <td>{{product.precio }}</td>
+            <td class="price">{{product.precio | currency:'$': 'symbol':'0.0' }}</td>
             <td>{{product.categoria | titlecase}}</td>
         </tr>
     </ng-template>
