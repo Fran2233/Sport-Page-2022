@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductoService } from '../../services/producto.service';
 import { Producto } from '../../models/producto.model';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,23 +10,34 @@ import { Producto } from '../../models/producto.model';
 })
 export class HomeComponent implements OnInit {
 
-  public productos: Producto[] = [];
+  public productos!: Producto[];
+
+
 
   constructor(private productoService: ProductoService) { }
 
   ngOnInit(): void {
-    console.log(this.cargarProductos());
-  }
 
-
-
-
-  cargarProductos() {
     this.productoService.getProductos()
-      .subscribe(res => {
-        this.productos = res.productos;
-        console.log(this.productos);
-      })
+    .pipe(
+      delay(1000)
+    ).subscribe(res => {
+      this.productos = res.productos;
+    })
+    
   }
+
+
+
+
+  // cargarProductos() {
+  //   this.productoService.getProductos()
+  //     .subscribe(res => {
+  //       this.productos = res.productos;
+  //       console.log(this.productos);
+  //     })
+  // }
+
+  
 
 }

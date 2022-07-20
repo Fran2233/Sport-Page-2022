@@ -1,0 +1,37 @@
+<div class="container-gallery">
+    <div class="gallery">
+        <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '640px'}"
+            [numVisible]="5" [circular]="true" [showItemNavigators]="true" [showThumbnails]="false">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+            </ng-template>
+            <ng-template pTemplate="thumbnail" let-item>
+                <div class="grid grid-nogutter justify-content-center">
+                    <img [src]="item.thumbnailImageSrc" style="display: block;" />
+                </div>
+            </ng-template>
+        </p-galleria>
+        <p-galleria [value]="allImages" [(visible)]="displayBasic2" [responsiveOptions]="responsiveOptions"
+            [containerStyle]="{'max-width': '850px'}" [numVisible]="7" [circular]="true" [fullScreen]="true"
+            [showItemNavigators]="true" [showThumbnails]="false" [baseZIndex]="100000">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+            </ng-template>
+            <ng-template pTemplate="thumbnail" let-item>
+                <div class="grid grid-nogutter justify-content-center">
+                    <img [src]="item.thumbnailImageSrc" style="display: block; margin-top: 1000px;;" />
+                </div>
+            </ng-template>
+        </p-galleria>
+        <button class="button" pButton type="button" icon="pi pi-external-link" label="See all images..."
+            (click)="displayBasic2 = true"></button>
+
+
+
+    </div>
+    <div class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga incidunt pariatur officia in cumque distinctio
+        quasi cupiditate impedit! Est expedita tenetur repellendus, placeat dignissimos dolore minus earum ratione
+        laudantium eos.
+    </div>
+</div>

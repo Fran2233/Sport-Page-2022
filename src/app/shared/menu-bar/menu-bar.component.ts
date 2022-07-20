@@ -22,7 +22,7 @@ export class MenuBarComponent implements OnInit {
         url: 'woman'
       },
       {
-        label: 'Boys',
+        label: 'Boy',
         url: 'boys'
       },
       {

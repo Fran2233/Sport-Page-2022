@@ -4,3 +4,8 @@ export interface cargarProductos {
     ok: boolean;
     productos: Producto[];
 }
+
+export interface cargarProducto {
+    ok: boolean;
+    producto: Producto;
+}

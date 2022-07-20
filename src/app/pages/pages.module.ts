@@ -7,6 +7,7 @@ import { WomanComponent } from './woman/woman.component';
 import { BoysComponent } from './boys/boys.component';
 import { GirlComponent } from './girl/girl.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductoComponent } from './producto/producto.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     ManComponent,
     WomanComponent,
     BoysComponent,
-    GirlComponent
+    GirlComponent,
+    ProductoComponent
   ],
   imports: [
     CommonModule,

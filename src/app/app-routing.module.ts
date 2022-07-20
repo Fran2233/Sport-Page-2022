@@ -5,6 +5,7 @@ import { ManComponent } from './pages/man/man.component';
 import { WomanComponent } from './pages/woman/woman.component';
 import { BoysComponent } from './pages/boys/boys.component';
 import { GirlComponent } from './pages/girl/girl.component';
+import { ProductoComponent } from './pages/producto/producto.component';
 
 const routes: Routes = [
 
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'girl',
     component: GirlComponent
+  },
+  {
+    path: 'producto/:id',
+    component: ProductoComponent
   },
   {
     path: '**',

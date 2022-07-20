@@ -6,6 +6,7 @@ import { PaginatorModule } from 'primeng/paginator';
 import { TableModule } from 'primeng/table';
 import { MenubarModule } from 'primeng/menubar';
 import {ButtonModule} from 'primeng/button';
+import {GalleriaModule} from 'primeng/galleria';
 @NgModule({
   declarations: [],
   imports: [
@@ -15,7 +16,8 @@ import {ButtonModule} from 'primeng/button';
     PaginatorModule,
     TableModule,
     MenubarModule,
-    ButtonModule
+    ButtonModule,
+    GalleriaModule
   ],
   exports: [
     CommonModule,
@@ -24,7 +26,8 @@ import {ButtonModule} from 'primeng/button';
     PaginatorModule,
     TableModule,
     MenubarModule,
-    ButtonModule
+    ButtonModule,
+    GalleriaModule
   ]
 })
 export class PrimeNgModule { }
