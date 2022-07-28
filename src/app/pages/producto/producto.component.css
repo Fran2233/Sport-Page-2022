@@ -1,38 +1,61 @@
-img{
+img {
     object-fit: cover;
-    
+
 }
 
 
-.container-gallery{
+.container-gallery {
     width: 100%;
-    height: 100%;
+    height: 20rem;
     border: 1px solid;
     border-color: red;
     display: flex;
-    
+    background-color: white
 }
 
-.gallery,.description{
-    border: 1px solid blue;
-}
 
-.gallery{
+
+.gallery {
     width: 50%;
     background-color: white;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    justify-content: space-between;
 }
 
-.description{
+.description {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
-.button{
-    
-    margin-top: auto;
+
+
+.row1 {
+    text-align: center;
+    height: 70%;
+}
+
+.row2 {
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.list-group-item {
+    margin: 5px;
+    border-radius: 20%;
 }
 
 
 
+
+button {
+    width: 30%;
+    height: 3rem;
+}

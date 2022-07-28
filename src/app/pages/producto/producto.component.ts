@@ -13,6 +13,7 @@ export class ProductoComponent implements OnInit {
   public urlImg!: any;
   public images!: any[];
   public allImages!: any[];
+  public talles!:number[];
 
   constructor(private activateRoute: ActivatedRoute,
     private productoService: ProductoService) { }
@@ -33,6 +34,7 @@ export class ProductoComponent implements OnInit {
         console.log(this.producto);
         this.images.splice(2, 4);
         this.loadAllImages(id);
+        this.producto.talles;
       });
   }
 

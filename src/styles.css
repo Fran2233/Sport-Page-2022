@@ -5,5 +5,7 @@ html,body{
     background-color: var(--surface-b);
     color: var(--text-color);
     font-family: var(--font-family);
+    
+    height:100%;
 }
 
