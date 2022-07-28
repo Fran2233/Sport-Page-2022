@@ -19,7 +19,7 @@
     <ng-template pTemplate="body" let-product>
         <tr>
             <td class="cursor" [routerLink]="['/producto',product.id]">{{product.nombre}}</td>
-            <td><img [src]="product.img!" [alt]="product.nombre" width="100" class="shadow-4" /></td>
+            <td class="cursor" [routerLink]="['/producto',product.id]"><img [src]="product.img!" [alt]="product.nombre" width="100" class="shadow-4" /></td>
             <td class="price">{{product.precio | currency:'$': 'symbol':'0.0' }}</td>
             <td>{{product.categoria | titlecase}}</td>
         </tr>
