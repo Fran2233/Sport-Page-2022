@@ -1,12 +1,57 @@
 img{
-    width: 4rem;
-    margin-right: 2rem;
+    width: 4em;
+    margin-right: 2em;
 }
 
-@media screen and (max-width:630px){
+
+
+@media (max-width: 1999px) {
+    img{
+        width: 60px;
+        
+       }
+}
+
+@media screen and (max-width:667px){
 
     img{
         margin-right: 0.5rem;
     }
 
+}
+
+
+@media only screen and (max-width: 523px){
+   img{
+    width: 55px;
+    
+   }
+}
+
+
+@media (max-width: 452px) {
+    img{
+        width: 50px;
+        
+       }
+}
+
+
+@media (max-width: 422px) {
+    img{
+        width: 46px;
+        
+       }
+}
+
+@media (max-width: 398px) {
+    img{
+        width: 40px;
+       }
+}
+
+@media (max-width: 362px) {
+    img{
+        width: 33px;
+       }
 }

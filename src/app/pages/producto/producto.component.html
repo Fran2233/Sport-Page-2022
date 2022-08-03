@@ -19,18 +19,18 @@
             </ng-template>
 
         </p-galleria>
-        <button class="p-button-outlined p-button-rounded p-button-secondary" pButton type="button" icon="pi pi-external-link" label="All images"
+        <button class="button-images p-button-outlined p-button-rounded p-button-secondary" pButton type="button"  label="All images"
             (click)="displayBasic2 = true"></button>
     </div>
     <div class="description">
         <div class="row1">
-
             <h2>{{producto.nombre}}</h2>
-            <h4>{{producto.precio | currency:'$': 'symbol':'0.0' }}</h4>
+            <h2>{{producto.precio | currency:'$': 'symbol':'0.0' }}</h2>
+            <button class="btn-buy btn btn-outline-primary" >Comprar</button>
         </div>
         <div class="row2">
 
-            <h4>Talles</h4>
+            <h4>Sizes</h4>
             <ul class="talles" >
                 <li *ngFor="let talle of producto.talles" >{{talle}}</li>
             </ul>

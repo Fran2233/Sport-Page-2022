@@ -6,6 +6,7 @@ import { WomanComponent } from './pages/woman/woman.component';
 import { BoysComponent } from './pages/boys/boys.component';
 import { GirlComponent } from './pages/girl/girl.component';
 import { ProductoComponent } from './pages/producto/producto.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
 
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'producto/:id',
     component: ProductoComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: '**',

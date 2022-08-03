@@ -1,11 +1,22 @@
-td{
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&family=Uchen&display=swap');
+
+td,tr {
     font-style: italic;
+    font-family: 'Square Peg', cursive;
+    font-size: 30px;
 }
 
-.price{
+.price {
     font-weight: bold;
 }
 
-.cursor{
-    cursor:pointer;
+.cursor {
+    cursor: pointer;
 }
+
+
+h1 {
+    text-align: center;
+}
+
+

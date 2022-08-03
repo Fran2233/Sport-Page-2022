@@ -8,6 +8,7 @@ import { BoysComponent } from './boys/boys.component';
 import { GirlComponent } from './girl/girl.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductoComponent } from './producto/producto.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -17,19 +18,13 @@ import { ProductoComponent } from './producto/producto.component';
     WomanComponent,
     BoysComponent,
     GirlComponent,
-    ProductoComponent
+    ProductoComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
     PrimeNgModule,
     HttpClientModule
   ],
-  exports: [
-    HomeComponent,
-    ManComponent,
-    WomanComponent,
-    BoysComponent,
-    GirlComponent
-  ]
 })
 export class PagesModule { }
