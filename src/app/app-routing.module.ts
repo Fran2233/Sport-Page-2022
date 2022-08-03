@@ -7,6 +7,7 @@ import { BoysComponent } from './pages/boys/boys.component';
 import { GirlComponent } from './pages/girl/girl.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { LoginComponent } from './pages/login/login.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
 
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'cart',
+    component: CartComponent
   },
   {
     path: '**',

@@ -30,15 +30,18 @@ export class MenuBarComponent implements OnInit {
         url: 'girl'
       },
       {
-
         icon: 'pi pi-home',
         url: 'home'
       },
       {
-
         icon: 'pi pi-user',
         url: 'login'
-      }
+      },
+      {
+        icon: 'pi pi-shopping-cart',
+        url: 'cart'
+      },
+
 
 
 
