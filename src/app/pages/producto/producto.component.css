@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Square+Peg&family=Uchen&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Square+Peg&family=Uchen&display=swap');
 .container-gallery {
     width: 100%;
     display: flex;
@@ -7,7 +7,7 @@
 }
 
 h2,h4,button{
-    font-family: 'Square Peg', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 50px;
     font-weight: bold;
 }

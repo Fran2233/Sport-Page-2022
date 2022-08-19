@@ -1,11 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Square+Peg&family=Uchen&display=swap');
 
 
 html,body{
     background-color: var(--surface-b);
-    color: var(--text-color);
-    font-family: var(--font-family);
-    
-    
+    color: var(--text-color); 
 }
 

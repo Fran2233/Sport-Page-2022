@@ -8,6 +8,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class MenuBarComponent implements OnInit {
   items!: MenuItem[];
+  public condicion:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
