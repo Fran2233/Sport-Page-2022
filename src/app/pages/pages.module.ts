@@ -6,10 +6,12 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { WomanComponent } from './woman/woman.component';
 import { BoysComponent } from './boys/boys.component';
 import { GirlComponent } from './girl/girl.component';
-import { HttpClientModule } from '@angular/common/http';
+
 import { ProductoComponent } from './producto/producto.component';
 import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
+import { ProductoService } from '../services/producto.service';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -21,12 +23,15 @@ import { CartComponent } from './cart/cart.component';
     GirlComponent,
     ProductoComponent,
     LoginComponent,
-    CartComponent
+    CartComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
     PrimeNgModule,
-    HttpClientModule
   ],
+  providers:[
+    ProductoService
+  ]
 })
 export class PagesModule { }

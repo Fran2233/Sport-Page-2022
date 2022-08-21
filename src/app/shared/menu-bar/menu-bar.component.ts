@@ -36,7 +36,20 @@ export class MenuBarComponent implements OnInit {
       },
       {
         icon: 'pi pi-user',
-        url: 'login'
+        items:[
+          {
+            label: 'Login',
+            icon: 'pi pi-user',
+            url: 'login'
+          },
+          {
+            label: 'New',
+            icon: 'pi pi-fw pi-user-plus',
+            url: 'register'
+          }
+          
+        ]
+        
       },
       {
         icon: 'pi pi-shopping-cart',
