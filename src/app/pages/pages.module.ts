@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductoService } from '../services/producto.service';
 import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     CommonModule,
     PrimeNgModule,
+    ReactiveFormsModule
   ],
   providers:[
     ProductoService

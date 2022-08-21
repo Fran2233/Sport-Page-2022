@@ -1,1 +1,49 @@
-<p>register works!</p>
+<form (ngSubmit)="createUser()" [formGroup]="registerForm">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input formControlName="nombre" type="email" class="form-control" 
+            aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">
+            <p  class="text-danger" *ngIf="campoIvalid('nombre')">*Nombre obligatorio</p>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+         formControlName="email"
+          type="email" 
+          class="form-control" 
+            aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">
+            <p  class="text-danger"  *ngIf="campoIvalid('email')">*Email obligatorio</p>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">pass</label>
+        <input
+         formControlName="password"
+          type="password" 
+          class="form-control" 
+            aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">pass2</label>
+        <input
+         formControlName="password2"
+          type="password" 
+          class="form-control" 
+            aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">
+            <p class="text-danger"  *ngIf="passwordsInvalids()">*Passwords no son igual</p>
+        </div>
+    </div>
+ 
+    <div class="mb-3 form-check">
+        <input formControlName="terminos" type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label  class="form-check-label" for="exampleCheck1">Check me out</label>
+        <p class="text-danger"  *ngIf="aceptaTerminos()">*Debe aceptar terminos</p>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
