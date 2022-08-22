@@ -37,9 +37,9 @@ export class LoginComponent implements OnInit, AfterViewInit {
   googleInit() {
     google.accounts.id.initialize({
       client_id: "669890155472-5gb91dfkotjhm4c6renkrchg0m245i11.apps.googleusercontent.com",
-      callback: (response:any) =>  this.handleCredentialResponse(response)
+      callback: (response: any) => this.handleCredentialResponse(response)
     });
-    
+
     google.accounts.id.renderButton(
       // document.getElementById("buttonDiv"),
       this.googleBtn.nativeElement,
@@ -50,13 +50,14 @@ export class LoginComponent implements OnInit, AfterViewInit {
   handleCredentialResponse(response: any) {
     // console.log("Encoded JWT ID token: " + response.credential);
     this.userService.loginGoogle(response.credential)
-    .subscribe(res =>{
-      console.log('login :', res);
-      this.router.navigateByUrl('/home');
-    })
+      .subscribe(res => {
+        this.router.navigateByUrl('/home');
+      });
+
   }
 
   ngOnInit(): void {
+    localStorage.removeItem('token');
   }
 
 
@@ -70,6 +71,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
           } else {
             localStorage.removeItem('email')
           }
+          this.router.navigateByUrl('/home');
         },
         error: (err) => {
 

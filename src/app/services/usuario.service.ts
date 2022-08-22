@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { RegisterForm } from '../interfaces/register-form.interface';
 import { LoginForm } from '../interfaces/login-form.interface';
-import { tap } from 'rxjs';
+import { map, tap, Observable, catchError, of } from 'rxjs';
 
 
 @Injectable({
@@ -16,7 +16,7 @@ export class UsuarioService {
   constructor(private http: HttpClient) { }
 
 
-  validarToken() {
+  validarToken(): Observable<boolean> {
     const token = localStorage.getItem('token') || '';
 
 
@@ -24,7 +24,15 @@ export class UsuarioService {
       headers: {
         'x-token': token
       }
-    });
+    }).pipe(
+      tap(
+        (res: any) => {
+          localStorage.setItem('token', res.token)
+        }
+      ),
+      map(res => true),
+      catchError(error => of(false))
+    )
   }
 
 

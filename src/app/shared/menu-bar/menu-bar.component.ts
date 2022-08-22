@@ -43,7 +43,7 @@ export class MenuBarComponent implements OnInit {
             url: 'login'
           },
           {
-            label: 'New',
+            label: 'Create Account',
             icon: 'pi pi-fw pi-user-plus',
             url: 'register'
           }
