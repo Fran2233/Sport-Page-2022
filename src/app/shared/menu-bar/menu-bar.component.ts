@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -8,10 +8,18 @@ import { MenuItem } from 'primeng/api';
 })
 export class MenuBarComponent implements OnInit {
   items!: MenuItem[];
-  public condicion:boolean = false;
+
+  public token = localStorage.getItem('token');
+
+
+
   constructor() { }
 
+
   ngOnInit(): void {
+
+
+
 
     this.items = [
       {
@@ -36,7 +44,7 @@ export class MenuBarComponent implements OnInit {
       },
       {
         icon: 'pi pi-user',
-        items:[
+        items: [
           {
             label: 'Login',
             icon: 'pi pi-user',
@@ -47,11 +55,12 @@ export class MenuBarComponent implements OnInit {
             icon: 'pi pi-fw pi-user-plus',
             url: 'register'
           }
-          
+
         ]
-        
+
       },
       {
+
         icon: 'pi pi-shopping-cart',
         url: 'cart'
       },
@@ -60,6 +69,10 @@ export class MenuBarComponent implements OnInit {
 
 
     ]
+
+    if (!this.token) {
+      this.items.pop();
+    }
   }
 
 }

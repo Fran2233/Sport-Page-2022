@@ -64,7 +64,8 @@ export class UsuarioService {
     return this.http.post(`${this.baseUrl}/login/google`, { token })
       .pipe(
         tap((res: any) => {
-          localStorage.setItem('token', res.token)
+          localStorage.setItem('token', res.token),
+          localStorage.setItem('emailGoogle', res.email)
         })
       )
   }

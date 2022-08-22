@@ -13,6 +13,8 @@ import { CartComponent } from './cart/cart.component';
 import { ProductoService } from '../services/producto.service';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UsuarioService } from '../services/usuario.service';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -30,10 +32,12 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     PrimeNgModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers:[
-    ProductoService
+    ProductoService,
+    UsuarioService
   ]
 })
 export class PagesModule { }

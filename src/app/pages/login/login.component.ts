@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   @ViewChild('googleBtn') googleBtn!: ElementRef;
 
   public formSubmitted = false;
-
+  public token = localStorage.getItem('token');
   public loginForm = this.fb.group({
     email: [localStorage.getItem('email') || '', Validators.required],
     password: ['', Validators.required],
@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    localStorage.removeItem('token');
+    localStorage.removeItem('token');    
   }
 
 
