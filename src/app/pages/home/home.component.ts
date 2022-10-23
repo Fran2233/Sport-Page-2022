@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductoService } from '../../services/producto.service';
 import { Producto } from '../../models/producto.model';
 import { delay } from 'rxjs';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +12,8 @@ import { delay } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   public productos!: Producto[];
-
-
-
+  paginator!:MatPaginator;
+  total!:number;
   constructor(private productoService: ProductoService) { }
 
   ngOnInit(): void {
@@ -23,6 +23,8 @@ export class HomeComponent implements OnInit {
       delay(1000)
     ).subscribe(res => {
       this.productos = res.productos;
+      console.log('PRODUCTOS->',res.total);
+      this.total = res.total;
     })
     
   }
@@ -38,6 +40,6 @@ export class HomeComponent implements OnInit {
   //     })
   // }
 
-  
+
 
 }

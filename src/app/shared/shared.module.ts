@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { FooterComponent } from './footer/footer.component';
+import { MaterialModule } from './material.module';
 
 
 
@@ -13,12 +14,14 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     CommonModule,
-    PrimeNgModule
+    PrimeNgModule,
+    MaterialModule
   ],
   exports: [
     MenuBarComponent,
     PrimeNgModule,
-    FooterComponent
+    FooterComponent,
+    MaterialModule
   ]
 })
 export class SharedModule { }

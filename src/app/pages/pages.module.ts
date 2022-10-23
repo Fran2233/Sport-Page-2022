@@ -15,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UsuarioService } from '../services/usuario.service';
 import { SharedModule } from '../shared/shared.module';
+import { MaterialModule } from '../shared/material.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     PrimeNgModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    MaterialModule
   ],
   providers:[
     ProductoService,

@@ -1,4 +1,4 @@
-<p-table [value]="productos" responsiveLayout="scroll">
+<p-table [value]="productos" responsiveLayout="scroll"  [paginator]="true" [rows]="5" [showCurrentPageReport]="true">
     <ng-template pTemplate="caption">
         <div class="flex align-items-center justify-content-between">
             <h1>All Products</h1>
@@ -24,7 +24,6 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="summary">
-
     </ng-template>
 </p-table>
 
